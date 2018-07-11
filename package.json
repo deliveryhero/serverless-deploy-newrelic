@@ -6,10 +6,16 @@
   "author": "rps",
   "license": "UNLICENSED",
   "private": false,
+  "scripts": {
+    "test": "yarn test-eslint",
+    "test-eslint": "eslint -c eslint.js index.js"
+  },
   "peerDependencies": {
     "serverless": "^1.27.3"
   },
   "devDependencies": {
+    "eslint": "^5.1.0",
     "serverless": "^1.27.3"
-  }
+  },
+  "dependencies": {}
 }

@@ -43,7 +43,7 @@ class DeployNewRelicPlugin {
     const req = https.request(options, (res) => {
       res.on('data', (data) => {
         this.serverless.cli.log(`New Relic response: ${data}`);
-      })
+      });
     });
 
     req.on('error', (e) => {
@@ -54,4 +54,5 @@ class DeployNewRelicPlugin {
     req.end();
   }
 }
+
 module.exports = DeployNewRelicPlugin;
