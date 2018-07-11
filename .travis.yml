@@ -10,9 +10,6 @@ cache:
   directories:
   - node_modules
 
-before_install:
-- sed 's/${GEM_FURY_KEY}/'$GEM_FURY_KEY'/g' .npmrc.dist > .npmrc
-
 install:
 - yarn install --ignore-engines
 
