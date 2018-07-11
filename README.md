@@ -1,4 +1,5 @@
 # serverless-deploy-newrelic
+Tiny Serverless plugin which calls New Relic deployment api after a deployment
 
 ## Setting up
 ### Add plugin to your repo
@@ -19,6 +20,6 @@ custom:
 serverless deploy --new-relic-revision=v1.1.1 --new-relic-release-description=some-description --new-relic-release-changelog=some-changelog 
 
 ### Supported parameters
---new-relic-revision
---new-relic-release-description
---new-relic-release-changelog
+--new-relic-revision # falls back to 'no-revision-specified' if empty
+--new-relic-release-description # falls back to empty string if empty
+--new-relic-release-changelog # falls back to empty string if empty
