@@ -15,9 +15,9 @@ plugins:
 ```yaml
 custom:
   serverless-deploy-newrlic:
-    application_id: {your-applicaiton-id} #mandatory
-    admin_api_key: ${env:NEW_RELIC_API_KEY} #mandatory
-    user: ${env:USER} #not mandatory
+    application_id: {your-applicaiton-id} # mandatory
+    admin_api_key: ${env:NEW_RELIC_API_KEY} # mandatory
+    user: ${env:USER} # not mandatory
 ```
 
 ## Usage
