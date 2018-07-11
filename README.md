@@ -19,6 +19,7 @@ custom:
     admin_api_key: ${env:NEW_RELIC_API_KEY} #mandatory
     user: ${env:USER} #not mandatory
 ```
+
 ## Usage
 serverless deploy --new-relic-revision=v1.1.1 --new-relic-release-description=some-description --new-relic-release-changelog=some-changelog 
 
