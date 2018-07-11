@@ -1,5 +1,0 @@
-_authToken=${GEM_FURY_KEY}
-always-auth=true
-//npm-proxy.fury.io/rps/:_authToken=${GEM_FURY_KEY}
-@rps:registry="https://npm-proxy.fury.io/rps/"
-ca=""
