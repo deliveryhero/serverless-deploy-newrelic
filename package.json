@@ -1,0 +1,15 @@
+{
+  "name": "serverless-deploy-newrelic",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:deliveryhero/serverless-deploy-newrelic.git",
+  "author": "rps",
+  "license": "UNLICENSED",
+  "private": false,
+  "peerDependencies": {
+    "serverless": "^1.27.3"
+  },
+  "devDependencies": {
+    "serverless": "^1.27.3"
+  }
+}

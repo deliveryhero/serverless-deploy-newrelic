@@ -1,0 +1,37 @@
+language: node_js
+node_js:
+- 8.10.0
+
+matrix:
+  fast_finish: true
+
+cache:
+  yarn: true
+  directories:
+  - node_modules
+
+before_install:
+- sed 's/${GEM_FURY_KEY}/'$GEM_FURY_KEY'/g' .npmrc.dist > .npmrc
+
+install:
+- yarn install --ignore-engines
+
+script:
+- yarn test
+
+after_failure:
+- sudo cat /var/log/syslog
+
+after_success:
+- |
+  cd $TRAVIS_BUILD_DIR
+  PACKAGE_VERSION=$(cat package.json \
+    | grep version \
+    | head -1 \
+    | awk -F: '{ print $2 }' \
+    | sed 's/[",]//g' \
+    | tr -d '[[:space:]]')
+
+  if [[ $TRAVIS_TAG =~ ^v$PACKAGE_VERSION$ ]]; then
+    npm publish
+  fi
