@@ -1,9 +1,9 @@
 {
-  "name": "serverless-deploy-newrelic",
+  "name": "@deliveryhero/serverless-deploy-newrelic",
   "version": "0.1.0",
   "main": "index.js",
   "repository": "git@github.com:deliveryhero/serverless-deploy-newrelic.git",
-  "author": "rps",
+  "author": "Delivery Hero AG",
   "license": "MIT",
   "private": false,
   "scripts": {
