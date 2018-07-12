@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": "git@github.com:deliveryhero/serverless-deploy-newrelic.git",
   "author": "rps",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": false,
   "scripts": {
     "test": "yarn test-eslint",
