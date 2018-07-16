@@ -19,16 +19,9 @@ script:
 after_failure:
 - sudo cat /var/log/syslog
 
-after_success:
-- |
-  cd $TRAVIS_BUILD_DIR
-  PACKAGE_VERSION=$(cat package.json \
-    | grep version \
-    | head -1 \
-    | awk -F: '{ print $2 }' \
-    | sed 's/[",]//g' \
-    | tr -d '[[:space:]]')
-
-  if [[ $TRAVIS_TAG =~ ^v$PACKAGE_VERSION$ ]]; then
-    npm publish
-  fi
+deploy:
+  provider: npm
+  email: "rps.devops@deliveryhero.com"
+  api_key: $NPM_KEY
+  on:
+    tags: true
