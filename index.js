@@ -18,7 +18,7 @@ class DeployNewRelicPlugin {
     const description = this.options['new-relic-release-description'] || '';
     const changelog = this.options['new-relic-release-changelog'] || '';
     if (!applicationId || !adminApiKey) {
-      this.serverless.cli.warn('application_id and admin_api_key must be defined');
+      this.serverless.cli.log('application_id and admin_api_key must be defined');
       return;
     }
 
@@ -47,7 +47,7 @@ class DeployNewRelicPlugin {
     });
 
     req.on('error', (e) => {
-      this.serverless.cli.error('Error when calling New Relic: ', e);
+      this.serverless.cli.log('Error when calling New Relic: ', e);
     });
 
     req.write(postData);
